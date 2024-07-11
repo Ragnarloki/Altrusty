@@ -28,6 +28,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        button:"rgba(45, 28, 100, 1)",
         progress_2:"rgba(240, 237, 255, 1)",
         progress:"rgba(112, 72, 251, 1)",
         primary: "#032d60",

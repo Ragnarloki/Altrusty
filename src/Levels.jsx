@@ -41,7 +41,7 @@ const levels=[
 function Levels() {
   return (
     <div className='bg-back'>
-          <div className='w-11/12 ml-14   flex justify-between h-5/6'>
+          <div className='w-11/12 ml-14  mt-6 flex justify-between h-5/6'>
         
         <div className='flex mt-1'>
           <FiArrowLeftCircle size={25}/> 
@@ -59,12 +59,12 @@ function Levels() {
        
         
       </div>
-          <div className="bg-white ml-16 font-bold h-96 w-5/6 rounded-md border">
+          <div className="bg-white ml-16 font-bold h-12/12 w-12/12 mr-4 rounded-md border">
             <h1 className=' m-4 font-extrabold text-xl'>Levels</h1>
             <hr className='border-b-2' />
             
             
-            <ScrollArea className="h-80 w-100% rounded-md ">
+            <ScrollArea className="h-96 w-100% rounded-md ">
             <div  className='flex font-bold justify-between m-4'>
                 
                 <h1 className='mt-4' >Level-1</h1>
