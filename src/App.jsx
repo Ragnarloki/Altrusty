@@ -64,7 +64,7 @@ function App() {
       //     </CardContent>
          
       //   </Card>
-      <div className='bg-white border-2 rounded-2xl  details w-48 text-center shadow-2xl border-gray-300 '>
+      <div key={task.id} className='bg-white border-2 rounded-2xl  details w-48 text-center shadow-2xl border-gray-300 '>
         <div className=' ml-1 mr-1'>
          <span className='font-bold  text-text flex justify-between mt-2'>
             <span className='flex '>

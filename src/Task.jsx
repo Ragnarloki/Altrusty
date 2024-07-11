@@ -9,31 +9,31 @@ const stages=[
         level:10
     },
     {
-        id:1,
+        id:2,
         progress:60,
         level:10
     },{
-        id:1,
+        id:3,
         progress:60,
         level:10
     },{
-        id:1,
+        id:4,
         progress:60,
         level:10
     },{
-        id:1,
+        id:5,
         progress:60,
         level:10
     },{
-        id:1,
+        id:6,
         progress:60,
         level:10
     },{
-        id:1,
+        id:7,
         progress:60,
         level:10
     },{
-        id:1,
+        id:8,
         progress:60,
         level:10
     }
@@ -62,17 +62,17 @@ function Task() {
     <div className=''>
         {stages.map((stage)=>(
             <div key={stage.id}>
-                <div className='flex justify-between m-5 -mb-5 font-semibold'>
+                <div className=' flex justify-between m-5 -mb-5 sm:mr-1 font-normal  md:font-semibold '>
                 <h1>Stage-{stage.id}</h1>
                 <div>
                     <span className=' flex justify-between'>
-                    <h1 className='w-52 mb-1 '>Progress bar</h1>
-                    <h1 className='text-progress'>{stage.progress}%</h1>
+                    <h1 className='sm:w-32 md:w-52 mb-1 '>Progress bar</h1>
+                    <h1 className='text-progress ml-1'>{stage.progress}%</h1>
                     </span>
                      <Progress value={progress} className="w-[100%]" />
                 
                 </div>
-                <h1 className='text-progress'>View Details</h1>
+                <h1 className='text-progress flex ml-2 mr-0'>View Details</h1>
                 </div>
                 
                 
