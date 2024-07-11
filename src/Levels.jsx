@@ -4,15 +4,12 @@ import { Button } from './components/ui/button';
 import { AlignCenter, PlusCircleIcon } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { FiUpload } from "react-icons/fi";
-
+import { FiLock } from "react-icons/fi";
 
 
 const levels=[
   
   {
-    level:1,
-    Description:"Description"
-  },{
     level:2,
     Description:"Description"
   },{
@@ -53,10 +50,10 @@ function Levels() {
         </div>
       
         <div className='flex' >
-            <h1 className=' active:text-progress mb-2 mt-2'>Activity log </h1>
-            <Button className="bg-white ml-2 hover:bg-progress ">Manage</Button>
-            <Button className="bg-progress ml-2 hover:bg-white mb-3">
-                <PlusCircleIcon size={20} className='mt-1  mr-1' />Create</Button>
+            <h1 className='text-text accent-current underline mb-2 mt-2'>Activity log </h1>
+            <Button className="bg-white ml-2 border border-black">Manage</Button>
+            <Button className="bg-progress text-white ml-2 mb-3">
+                <PlusCircleIcon size={20}  className='mt-1  mr-1' />Create</Button>
     
         </div>
        
@@ -68,11 +65,10 @@ function Levels() {
             
             
             <ScrollArea className="h-80 w-100% rounded-md ">
-              {levels.map((level)=>(
-                <div key={level.level} className='flex justify-between m-4'>
+            <div  className='flex font-bold justify-between m-4'>
                 
-                <h1 className='mt-4' >Level-{level.level}</h1>
-                <h1 className='mt-4'>{level.Description}</h1>
+                <h1 className='mt-4' >Level-1</h1>
+                <h1 className='mt-4'>Description</h1>
                 <span >
 
 
@@ -82,7 +78,29 @@ function Levels() {
                   </span>
                     </div>
                   
-                  <span className='text-center '>
+                  <span className='text-center selce '>
+                  <h1>Upload files</h1>
+                  <h1 className='font-thin'>Upload task file to complete level</h1>
+                  </span>
+                  
+                  
+                </span>
+              </div>
+              {levels.map((level)=>(
+                <div key={level.level} className='flex  text-gray-300 justify-between m-4'>
+                
+                <h1 className='mt-4' >Level-{level.level}</h1>
+                <h1 className='mt-4 flex '>{level.Description}<FiLock className='z-10' size={40}/></h1>
+                <span >
+
+
+                <div className="flex items-center justify-center h-6">
+                  <span className='items-center'>
+                   <FiUpload className='bg-back' size={25} color='text'/>
+                  </span>
+                    </div>
+                  
+                  <span className='text-center'>
                   <h1>Upload files</h1>
                   <h1 className='font-thin'>Upload task file to complete level</h1>
                   </span>
@@ -94,7 +112,7 @@ function Levels() {
             </ScrollArea>
         </div>
 
-
+       
 
 <br />
 
