@@ -67,7 +67,7 @@ function Task() {
                 <div>
                     <span className=' flex justify-between'>
                     <h1 className='sm:w-32 md:w-52 mb-1 '>Progress bar</h1>
-                    <h1 className='text-progress ml-1'>{stage.progress}%</h1>
+                    <h1 className='text-progress ml-1 '>{stage.progress}%</h1>
                     </span>
                      <Progress value={progress} className="w-[100%]" />
                 
