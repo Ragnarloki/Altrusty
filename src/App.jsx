@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { icons } from 'lucide-react'
-
+import Task from './Task';
 const tasks=[
   {
     id:1,
@@ -40,7 +40,8 @@ const tasks=[
 ]
 function App() {
   return (
-    <div className='grid ml-2 mr-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 bg-back'>
+    <div className=' bg-back'>
+    <div className='grid ml-2 mr-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10'>
       {tasks.map((task)=>(
       //     <Card className='bg-white rounded-lg  shadow-2xl text-center border' key={task.id} >
       //     <CardHeader>
@@ -63,8 +64,8 @@ function App() {
       //     </CardContent>
          
       //   </Card>
-      <div className='bg-white border-2 rounded-2xl   w-48 text-center shadow-2xl border-gray-300 '>
-        <div className='ml-1 mr-1'>
+      <div className='bg-white border-2 rounded-2xl  details w-48 text-center shadow-2xl border-gray-300 '>
+        <div className=' ml-1 mr-1'>
          <span className='font-bold  text-text flex justify-between mt-2'>
             <span className='flex '>
             <h1 >{task.taskname} </h1>
@@ -88,6 +89,11 @@ function App() {
           
        </div>
         
+       </div>
+       
+  </div>
+  <div className="flex justify-center items-center h-72">
+           <Task />
        </div>
   </div>
   )

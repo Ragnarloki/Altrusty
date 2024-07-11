@@ -28,9 +28,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        progress_2:"rgba(240, 237, 255, 1)",
+        progress:"rgba(112, 72, 251, 1)",
         primary: "#032d60",
         text:"rgba(45, 28, 100, 1)",
         back:"rgba(240, 237, 255, 1)",
+        four_squares:"rgba(212, 200, 253, 1)",
         accent: "#eaf5fe",
         secondary: "#ce4d2f",
         secondaryDark: "#8c3a23",
