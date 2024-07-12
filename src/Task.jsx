@@ -48,7 +48,13 @@ function Task() {
       return () => clearTimeout(timer)
     }, [])
    
-     
+    var newDate = new Date();
+  let dateTime = new Intl.DateTimeFormat("en-In", {
+    dateStyle: "short",
+    timeStyle: "short",
+  });
+  let curDate = dateTime.format(newDate); 
+      
   return (
     <div className='h-full m-4 w-full  md:flex  justify-evenly'>
     <div className="w-full md:w-5/6   h-5/6 bg-white border-2 border-back rounded-lg shadow-md">
@@ -87,7 +93,33 @@ function Task() {
         ))}
     </div>
     </div>
-    <div className="mt-1 rounded-xl text-center w-[330px] md:h-60 sm:ml-5 sm:pl-2 bg-white ml-2 mb-2 mr-2">
+    <div> 
+      {/* side main compo */}
+      <div className=" w-246  rounded md:shrink-0 ">
+          {/* your last activity */}
+          <div className="mt-2 sm:w-[330px] sm:ml-5 sm:pl-2 rounded-xl bg-white ml-2 mr-2">
+            <span>
+              <p className="pt-2 pl-2 text-primaryLight font-bold text-medium">
+                My Tasks
+              </p>
+              <p className=" pl-2 text-xs text-slate-500 font-medium">
+                {curDate}
+              </p>
+            </span>
+            <div className="w-[250px] pt-2 pl-2">
+              <span className=" flex justify-between text-gray-500 font-medium text-sm">
+                {" "}
+                <p>Stage-1 {">"} Stage-2</p>
+                <p className="">10%</p>
+              </span>
+              <Progress value={10} className="ml-1  mr-2 mb-2" />
+            </div>
+            <button className="w-[250px] m-2 text-white h-[30px] bg-primaryLight">
+              Resume
+            </button>
+          </div>
+        </div>  
+       <div className="mt-1 rounded-xl text-center w-[330px] md:h-60 sm:ml-5 sm:pl-2 bg-white ml-2 mb-2 mr-2">
             <img
               src={virtual_assistant}
               className="h-[100px] w-[100px] ml-[90px]"
@@ -106,6 +138,8 @@ function Task() {
               Start Converse
             </button>
           </div>
+      </div>
+
     </div>
   
  
