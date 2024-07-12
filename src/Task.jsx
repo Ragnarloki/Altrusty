@@ -53,13 +53,13 @@ function Task() {
     <div className='h-full m-4 w-full  md:flex  justify-evenly'>
     <div className="w-full md:w-5/6   h-5/6 bg-white border-2 border-back rounded-lg shadow-md">
     <div className='relative '>
-    <p className="text-xl  flex justify-between font-semibold text-gray-800">
-        <p className='text-text ml-2 mt-2'>Stages</p>
+    <div className="text-xl  flex justify-between font-semibold text-gray-800">
+        <div className='text-text ml-2 mt-2'>Stages</div>
         <span className='bg-four_squares mr-2 mt-2 items-center  rounded-full w-8 h-8'>
            <PiSquaresFour className=' mt-1.5 ml-1.5 '  color='rgba(45, 28, 100, 1)'/>
         </span>
         
-    </p>
+    </div>
     <hr className='mt-3'/>
     </div>
 
