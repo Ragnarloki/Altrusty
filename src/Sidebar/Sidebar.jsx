@@ -26,7 +26,7 @@ function Sidebar() {
     {/* downbar */}
         <div className=' top-20'>
           {/*Components*/}
-          <div className='hover:bg-violet-600 hover:text-white  ml-6 mb-6 flex flex-col items-center w-50 rounded cursor-pointer h-44'>
+          <div className='hover:bg-violet-600 hover:text-white  ml-6 mb-6 flex flex-col items-center w-50 rounded cursor-pointer h-'>
             <PiSquaresFour size="20"  />
             <button className='  rounded'>Overview</button>
       

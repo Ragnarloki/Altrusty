@@ -41,31 +41,10 @@ const tasks=[
 ]
 function Home() {
   return (
-    <div className=' bg-back'>
-    <div className='grid ml-2 mr-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10'>
+    <div className='bg-accent'>
+    <div className='grid ml-2 mr-2 grid-cols-2  md:grid-cols-4 gap-10'>
       {tasks.map((task)=>(
-      //     <Card className='bg-white rounded-lg  shadow-2xl text-center border' key={task.id} >
-      //     <CardHeader>
-      //       <CardTitle className="flex justify-between">{task.taskname} {task.icons}</CardTitle>
-      //     </CardHeader>
-      //     <CardContent>
-      //       <p>{task.level} </p>
-      //     </CardContent>
-      //     <CardContent >
-      //       <p>See Details {'>'}</p>
-      //     </CardContent>
-      //   </Card>
-      // ))}
-      // <Card className='bg-white rounded-lg w-70 text-center border w-36' >
-      //     <CardHeader>
-      //       <CardTitle>Add Stage</CardTitle>
-      //     </CardHeader>
-      //     <CardContent className="text-center ml-7">
-      //     <HiOutlinePlusCircle size={30}/>
-      //     </CardContent>
-         
-      //   </Card>
-      <div key={task.id} className='bg-white border-2 rounded-2xl  details w-48 text-center shadow-2xl border-gray-300 '>
+      <div key={task.id} className='bg-white mt-2 border-2 rounded-2xl  details w-40 md:w-48 text-center  '>
         <div className=' ml-1 mr-1'>
          <span className='font-bold  text-text flex justify-between mt-2'>
             <span className='flex '>
@@ -81,19 +60,19 @@ function Home() {
        </div>
        
       ))}     
-      <div className='bg-white border-2 font-bold rounded-lg  w-48 text-center shadow-2xl border-gray-300'>
+      <div className='bg-white border-2  rounded-2xl  details w-40 md:w-48 text-center  '>
         <div className='ml-1 mr-1 mt-2'>
-         <span className=' text-text text-center'>
+         <span className=' text-text font-bold text-center'>
             <h1 >Add Stages</h1>
           </span>
-          <h2 className='mt-4  ml-20'><HiOutlinePlusCircle   size={25}/></h2>
+          <h2 className='mt-4 ml-16 sm:ml-20'><HiOutlinePlusCircle   size={25}/></h2>
           
        </div>
         
        </div>
        
   </div>
-  <div className="flex justify-center items-center h-72">
+  <div className="flex justify-center items-center h-full">
            <Task />
        </div>
 

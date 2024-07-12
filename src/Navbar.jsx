@@ -18,13 +18,48 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { GiHamburgerMenu } from "react-icons/gi";
 function Navbar() {
   return (
     <div>
         <div className='flex justify-between '>
         <div className='flex'>
-            <Button className="bg-button w-12 text-white h-6 m-4 ml-8">Logo</Button>
-            <h1 className='mt-4 text-progress font-semibold'>Pr. Name</h1>
+        <div className="md:hidden">
+            <Sheet>
+            <SheetTrigger className='m-4'><GiHamburgerMenu size={30}/></SheetTrigger>
+            <SheetContent>
+            <SheetHeader>
+                <SheetDescription>
+                <div className='absolute top-20 bg-white'>
+          {/*Components*/}
+          <div className='hover:bg-violet-600 hover:text-white  ml-6 mb-6 flex flex-col justify-center items-center w-50 rounded-xl cursor-pointer h-20'>
+            <PiSquaresFour size="30"   />
+            <button className='  rounded'>Overview</button>
+      
+          </div>
+          
+          <div className=' hover:bg-violet-600 hover:text-white ml-6 mb-6 flex flex-col justify-center items-center w-40 rounded-xl cursor-pointer h-20'>
+           <GrSchedule size="30"  />
+            <button className='  rounded'>Schedules</button>
+      
+          </div>
+          <hr class="h-px my-8 ml-6 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+          <div className=' hover:bg-violet-600 ml-6 mb-2  flex flex-col justify-center items-center w-40 rounded-xl cursor-pointer h-20'>
+            <IoSettingsOutline  size="30" />
+            <button className='  rounded'>Overview</button>
+      
+          </div>
+          </div>
+           
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>          
+            </Sheet>
+          </div>
+
+
+            <Button className="bg-button w-12 text-white h-6 m-4 ml-8 hidden md:block">Logo</Button>
+            <h1 className='mt-4 text-progress font-semibold hidden md:block'>Pr. Name</h1>
             <hr />
             <div class="relative mt-2 ml-12">
                <input type="text" placeholder="Search..." class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-500 w-64 pl-10" />
@@ -45,10 +80,10 @@ function Navbar() {
         </div>
         <hr />
   
-      
+                 
     {/* downbar */}
     <div className='grid grid-cols-1 '> 
-      <div className='absolute top-20 bg-white'>
+    <div className='hidden md:block absolute top-20 bg-white'>
           {/*Components*/}
           <div className='hover:bg-violet-600 hover:text-white  ml-6 mb-6 flex flex-col justify-center items-center w-50 rounded-xl cursor-pointer h-20'>
             <PiSquaresFour size="30"   />
@@ -67,43 +102,10 @@ function Navbar() {
             <button className='  rounded'>Overview</button>
       
           </div>
+    </div>
+         
           
-          <div className="md:hidden">
-          <Sheet >
-      <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </SheetTrigger>
-      <SheetContent>
-        <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
-          </SheetDescription>
-        </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
-        </SheetFooter>
-      </SheetContent>
-    </Sheet>
-          </div>
-          
-      </div>
+      
       <div className='bg-back md:ml-80'>
             <Levels />
       </div>

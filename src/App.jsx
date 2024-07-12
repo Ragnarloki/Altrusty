@@ -5,9 +5,9 @@ import Navbar from './Navbar'
 import Levels from './Levels'
 function App() {
   return (
-    <div>
+    <div className='bg-accent'>
       
-      <Navbar />
+      <Home />
       
     </div>
   )

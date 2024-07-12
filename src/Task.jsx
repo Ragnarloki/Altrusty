@@ -2,6 +2,8 @@ import { Bold } from 'lucide-react';
 import React, { useState } from 'react'
 import { PiSquaresFour } from "react-icons/pi";
 import { Progress } from "@/components/ui/progress";
+
+import virtual_assistant from "/virtual_assistant.webp";
 const stages=[
     {
         id:1,
@@ -48,7 +50,8 @@ function Task() {
    
      
   return (
-    <div className="w-5/6 overflow-scroll  h-5/6 bg-white border-2 border-back rounded-lg shadow-md">
+    <div className='h-full m-4 w-full  md:flex  justify-evenly'>
+    <div className="w-full md:w-5/6   h-5/6 bg-white border-2 border-back rounded-lg shadow-md">
     <div className='relative '>
     <p className="text-xl  flex justify-between font-semibold text-gray-800">
         <p className='text-text ml-2 mt-2'>Stages</p>
@@ -59,6 +62,9 @@ function Task() {
     </p>
     <hr className='mt-3'/>
     </div>
+
+
+  
     <div className=''>
         {stages.map((stage)=>(
             <div key={stage.id}>
@@ -80,8 +86,31 @@ function Task() {
             </div>
         ))}
     </div>
-  </div>
+    </div>
+    <div className="mt-1 rounded-xl text-center w-[330px] md:h-60 sm:ml-5 sm:pl-2 bg-white ml-2 mb-2 mr-2">
+            <img
+              src={virtual_assistant}
+              className="h-[100px] w-[100px] ml-[90px]"
+              alt="virtual assistant is not available"
+            />
+            <span>
+              <p className="pt-2 pl-2 text-primaryLight text-center font-bold text-medium">
+                Ask me anything
+              </p>
+              <p className=" pl-2 text-xs text-slate-500 font-medium">
+                I am here to resolve your queries and doubts
+              </p>
+            </span>
+
+            <button className="w-[250px] m-2 text-white h-[30px] bg-primaryLight">
+              Start Converse
+            </button>
+          </div>
+    </div>
+  
+ 
   )
+  
 }
 
 export default Task
